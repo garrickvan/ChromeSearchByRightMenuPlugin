@@ -1,0 +1,153 @@
+<!DOCTYPE doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>配置1键搜索</title>
+    <style>
+        body, html {
+            font-size: 14px;
+            padding: 0;
+            background: #eee;
+        }
+
+        p {
+            margin: 8px 0;
+            line-height: 1.5;
+        }
+
+        #optionTitle {
+            float: left;
+            font-size: 22px;
+            font-weight: bold;
+        }
+
+        #container {
+            margin: 20px auto;
+            width: 61.8%;
+            min-width: 500px;
+        }
+
+        .item {
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-shadow: #ddd 1px 1px 2px;
+            margin-bottom: 16px;
+            background: #fff;
+            padding: 16px 32px;
+        }
+
+        input[type="text"], input[type="number"] {
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 4px 8px;
+            font-size: 14px;
+        }
+
+        input.error {
+            border: 1px solid #ff0000;
+        }
+
+        label.title {
+            display: inline-block;
+            font-size: 16px;
+            font-weight: bold;
+            margin-bottom: 4px;
+        }
+
+        .section .label-row label {
+            min-width: 58px;
+        }
+
+        #optionHeader {
+            padding-bottom: 10px;
+        }
+
+        .delBtn {
+            position: absolute;
+            right: 0px;
+            top: 24px;
+            border: 0px;
+            background: #fff;
+            color: red;
+        }
+
+        .section {
+            padding: 20px 0;
+            position: relative;
+            border-bottom: 1px dashed #CCD;
+        }
+
+        .section .label-row {
+            padding: 5px 0;
+            display: flex;
+        }
+
+        .inputFullWidth {
+            width: 100%;
+        }
+
+        .btms {
+            padding: 10px 0 0;
+            text-align: center;
+        }
+
+        .heads {
+            padding: 0 10px 10px;
+            text-align: right;
+        }
+
+        #noItmes {
+            text-align: center;
+            padding: 10px;
+        }
+
+        #opStuatus {
+            font-size: 18px;
+            margin: 20px 10px 0;
+            display: none;
+            text-align: center;
+            color: green
+        }
+    </style>
+    </meta>
+</head>
+<body>
+<div id="container">
+    <div id="options">
+        <div id="optionHeader">
+            <div id="optionTitle">
+                设置
+            </div>
+            <div class="heads">
+                <button id="addItem">
+                    增加新菜单
+                </button>
+            </div>
+        </div>
+        <div class="item">
+            <div id="noItmes" style="display: none;">
+                请右上角点击添加新菜单或<a id="initItem" href="#">初始化</a>
+            </div>
+            <div id="savedItems"></div>
+            <div class="btms">
+                <button id="saveItemBtn">保 存</button>
+            </div>
+            <div id="opStuatus">保存成功!</div>
+        </div>
+        <div class="item">
+            <div class="introduction">
+                <h3>使用方法：</h3>
+                选中网页上你要搜索的词，点右键，选中"1键搜索"，再选对应的搜索网站，即可一键跳过去
+                <br></br>
+                <h3>获取搜索网址：</h3>
+                举个百度的栗子：<br></br>1、在百度搜索首页，搜索框输入_SEARCH_CONTEXT_，回车
+                <br></br>2、结果页地址栏的地址复制下来，即可得到链接形如：https://www.baidu.com/s?wd=_SEARCH_CONTEXT_
+                <br></br>3、填入搜索地址，点保存按钮，即可出现在右键，其他带搜索功能的网站都类似
+            </div>
+        </div>
+    </div>
+</div>
+<script src="options.js">
+</script>
+</body>
+</html>
